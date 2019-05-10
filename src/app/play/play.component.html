@@ -1,0 +1,21 @@
+<div class="jumbotron"> <h1 style="text-align: center"> <b> Welcome to GameCity! Your Card Balance Amount is Rs {{bal}} </b> </h1>
+</div>
+
+<table class="table table-dark">
+  <thead>
+      <tr>
+          <th>Id</th>
+          <th>Game Name</th>
+          <th>Price</th>
+
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let gam of games">
+          <td>{{gam.id}}</td>
+          <td>{{gam.game_name}}</td>
+          <td>Rs {{gam.game_price}}</td>
+          <td > <button class="btn btn-info" (click)="play(gam.game_price)"> <b> <u> Playnow </u> </b> </button> </td>
+      </tr>
+  </tbody>
+</table>
